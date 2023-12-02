@@ -33,3 +33,8 @@ video {
   display: block;
   max-width: 100%;
 }
+
+.num-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}

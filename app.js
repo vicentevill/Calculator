@@ -44,7 +44,7 @@ for (let i = 0; i < numInput.length; i++) {
   numInput[i].addEventListener("click", () => {
     appendNumber(numInput[i].innerHTML);
     expressionDisplay.innerHTML = expression;
-    result.innerHTML = `Result: ${eval(expression)}`;
+    result.innerHTML = `${eval(expression)}`;
   });
 }
 
@@ -58,6 +58,7 @@ for (let i = 0; i < operatorInputs.length; i++) {
 clear.addEventListener("click", () => {
   clearExpression();
   expressionDisplay.innerHTML = expression;
+  result.innerHTML = expression;
 });
 
 backSpace.addEventListener("click", () => {
