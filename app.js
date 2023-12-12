@@ -35,7 +35,9 @@ const clearExpression = () => {
 };
 
 const backSpaceDelete = () => {
-  if (expression.length === 1) {
+  if (expression === "") {
+    return;
+  } else if (expression.length === 1) {
     clearExpression();
   } else if (expression[expression.length - 1] === " ") {
     expression = expression.slice(0, -3);
@@ -48,7 +50,6 @@ const backSpaceDelete = () => {
   } else {
     expression = expression.slice(0, -1);
     expressionDisplay.innerHTML = expression;
-
     result.innerHTML = `${eval(expression)}`;
   }
 };
